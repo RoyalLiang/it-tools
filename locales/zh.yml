@@ -323,6 +323,12 @@ tools:
   date-converter:
     title: 日期时间转换器
     description: 将日期和时间转换为各种不同的格式
+    input: 请输入日期时间字符串...
+    local: JS本地时间
+    unixTimestamp: Unix 时间戳
+    timestamp: 时间戳
+    utcFormat: UTC 格式
+
 
   phone-parser-and-formatter:
     title: 电话分析器和格式化程序

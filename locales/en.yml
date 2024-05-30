@@ -327,6 +327,11 @@ tools:
   date-converter:
     title: Date-time converter
     description: Convert date and time into the various different formats
+    input: Put you date string here...
+    local: JS locale date string
+    unixTimestamp: Unix timestamp
+    timestamp: Timestamp
+    utcFormat: UTC format
 
   phone-parser-and-formatter:
     title: Phone parser and formatter

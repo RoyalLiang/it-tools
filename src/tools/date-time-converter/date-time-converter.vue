@@ -33,9 +33,11 @@ const inputDate = ref('');
 
 const toDate: ToDateMapper = date => new Date(date);
 
+const { t } = useI18n();
+
 const formats: DateFormat[] = [
   {
-    name: 'JS locale date string',
+    name: t('tools.date-converter.local'),
     fromDate: date => date.toString(),
     toDate,
     formatMatcher: () => false,
@@ -65,19 +67,19 @@ const formats: DateFormat[] = [
     formatMatcher: date => isRFC7231DateString(date),
   },
   {
-    name: 'Unix timestamp',
+    name: t('tools.date-converter.unixTimestamp'),
     fromDate: date => String(getUnixTime(date)),
     toDate: sec => fromUnixTime(+sec),
     formatMatcher: date => isUnixTimestamp(date),
   },
   {
-    name: 'Timestamp',
+    name: t('tools.date-converter.timestamp'),
     fromDate: date => String(getTime(date)),
     toDate: ms => parseJSON(+ms),
     formatMatcher: date => isTimestamp(date),
   },
   {
-    name: 'UTC format',
+    name: t('tools.date-converter.utcFormat'),
     fromDate: date => date.toUTCString(),
     toDate,
     formatMatcher: date => isUTCDateString(date),
@@ -155,7 +157,7 @@ function formatDateUsingFormatter(formatter: (date: Date) => string, date?: Date
       <c-input-text
         v-model:value="inputDate"
         autofocus
-        placeholder="Put your date string here..."
+        :placeholder="t('tools.date-converter.input')"
         clearable
         test-id="date-time-converter-input"
         :validation="validation"
