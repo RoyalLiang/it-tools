@@ -7,7 +7,7 @@ import { Heart, Home2, Menu2 } from '@vicons/tabler';
 import { storeToRefs } from 'pinia';
 import HeroGradient from '../assets/hero-gradient.svg?component';
 import MenuLayout from '../components/MenuLayout.vue';
-import NavbarButtons from '../components/NavbarButtons.vue';
+//import NavbarButtons from '../components/NavbarButtons.vue';
 import { useStyleStore } from '@/stores/style.store';
 import { config } from '@/config';
 import type { ToolCategory } from '@/tools/tools.types';
@@ -39,7 +39,7 @@ const tools = computed<ToolCategory[]>(() => [
         <HeroGradient class="gradient" />
         <div class="text-wrapper">
           <div class="title">
-            IT - TOOLS
+            {{ t('home.name') }} TOOLS
           </div>
           <div class="divider" />
           <div class="subtitle">
@@ -49,43 +49,43 @@ const tools = computed<ToolCategory[]>(() => [
       </RouterLink>
 
       <div class="sider-content">
-        <div v-if="styleStore.isSmallScreen" flex flex-col items-center>
-          <locale-selector w="90%" />
+        <!--<div v-if="styleStore.isSmallScreen" flex flex-col items-center>-->
+          <!--<locale-selector w="90%" />-->
 
-          <div flex justify-center>
-            <NavbarButtons />
-          </div>
-        </div>
+          <!--<div flex justify-center>-->
+            <!--<NavbarButtons />-->
+          <!--</div>-->
+        <!--</div>-->
 
         <CollapsibleToolMenu :tools-by-category="tools" />
 
-        <div class="footer">
-          <div>
-            IT-Tools
+        <!--<div class="footer">-->
+        <!--  <div>-->
+        <!--    IT-Tools-->
 
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
-              v{{ version }}
-            </c-link>
+        <!--    <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">-->
+        <!--      v{{ version }}-->
+        <!--    </c-link>-->
 
-            <template v-if="commitSha && commitSha.length > 0">
-              -
-              <c-link
-                target="_blank"
-                rel="noopener"
-                type="primary"
-                :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`"
-              >
-                {{ commitSha }}
-              </c-link>
-            </template>
-          </div>
-          <div>
-            © {{ new Date().getFullYear() }}
-            <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh">
-              Corentin Thomasset
-            </c-link>
-          </div>
-        </div>
+        <!--    <template v-if="commitSha && commitSha.length > 0">-->
+        <!--      --->
+        <!--      <c-link-->
+        <!--        target="_blank"-->
+        <!--        rel="noopener"-->
+        <!--        type="primary"-->
+        <!--        :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`"-->
+        <!--      >-->
+        <!--        {{ commitSha }}-->
+        <!--      </c-link>-->
+        <!--    </template>-->
+        <!--  </div>-->
+        <!--  <div>-->
+        <!--    © {{ new Date().getFullYear() }}-->
+        <!--    <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh">-->
+        <!--      Corentin Thomasset-->
+        <!--    </c-link>-->
+        <!--  </div>-->
+        <!--</div>-->
       </div>
     </template>
 
@@ -106,34 +106,34 @@ const tools = computed<ToolCategory[]>(() => [
           </c-button>
         </c-tooltip>
 
-        <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">
-          <c-button v-if="config.app.env === 'development'" to="/c-lib" circle variant="text" :aria-label="$t('home.uiLib')">
-            <icon-mdi:brush-variant text-20px />
-          </c-button>
-        </c-tooltip>
+        <!--<c-tooltip :tooltip="$t('home.uiLib')" position="bottom">-->
+        <!--  <c-button v-if="config.app.env === 'development'" to="/c-lib" circle variant="text" :aria-label="$t('home.uiLib')">-->
+        <!--    <icon-mdi:brush-variant text-20px />-->
+        <!--  </c-button>-->
+        <!--</c-tooltip>-->
 
         <command-palette />
 
-        <locale-selector v-if="!styleStore.isSmallScreen" />
+        <!--<locale-selector v-if="!styleStore.isSmallScreen" />-->
 
         <div>
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" :tooltip="$t('home.support')">
-          <c-button
-            round
-            href="https://www.buymeacoffee.com/cthmsst"
-            rel="noopener"
-            target="_blank"
-            class="support-button"
-            :bordered="false"
-            @click="() => tracker.trackEvent({ eventName: 'Support button clicked' })"
-          >
-            {{ $t('home.buyMeACoffee') }}
-            <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
-          </c-button>
-        </c-tooltip>
+        <!--<c-tooltip position="bottom" :tooltip="$t('home.support')">-->
+        <!--  <c-button-->
+        <!--    round-->
+        <!--    href="https://www.buymeacoffee.com/cthmsst"-->
+        <!--    rel="noopener"-->
+        <!--    target="_blank"-->
+        <!--    class="support-button"-->
+        <!--    :bordered="false"-->
+        <!--    @click="() => tracker.trackEvent({ eventName: 'Support button clicked' })"-->
+        <!--  >-->
+        <!--    {{ $t('home.buyMeACoffee') }}-->
+        <!--    <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />-->
+        <!--  </c-button>-->
+        <!--</c-tooltip>-->
       </div>
       <slot />
     </template>

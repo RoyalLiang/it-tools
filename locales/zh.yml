@@ -3,7 +3,8 @@ home:
     newestTools: '最新工具'
     favoriteTools: '我的收藏'
     allTools: '全部工具'
-  subtitle: '助力开发人员和 IT 工作者'
+  name: 疯奇
+  subtitle: '在线IT工具, 好看又好用'
   toggleMenu: '切换菜单'
   home: '主页'
   uiLib: 'UI 库'
@@ -56,6 +57,11 @@ toolCard:
   new: '新'
 search:
   label: '搜索'
+copy:
+  copyToPaste: '复制到剪贴板'
+  copied: '已复制!'
+  refresh: 刷新
+  copy: 复制
 tools:
   categories:
     favorite-tools: '我的收藏'
@@ -184,6 +190,21 @@ tools:
   base64-string-converter:
     title: Base64 字符串编码/解码
     description: 将字符串编码和解码为其 Base64 格式表示形式即可。
+    stringToBase64: 字符串转Base64
+    urlEncodeSafe: URL编码安全
+    stringEncode: 待编码字符串
+    inputString: 请输入要进行 Base64 编码的字符串...
+    base64String: Base64字符串
+    base64ShowString: Base64 编码结果将展示在此
+    copyBase64: 复制Base64字符串
+
+    base64ToString: Base64转字符串
+    urlDecodeSafe: URL解码安全
+    base64Encode: 待解码的Base64字符串
+    inputBase64: 请输入要进行解码的Base64字符串...
+    decodeString: 解码后的字符串
+    decodeShow: 解码后的字符串将展示在此
+    copyString: 复制解码字符串
 
   toml-to-yaml:
     title: TOML 到 YAML
@@ -224,6 +245,11 @@ tools:
   json-prettify:
     title: JSON美化和格式化
     description: 将JSON字符串修饰为友好的可读格式。
+    rawJson: 原始JSON字符串
+    pretty: 格式化后的字符串
+    sortKeys: 键排序
+    indentSize: 缩进
+    invalid: 提供的JSON字符串格式错误
 
   docker-run-to-docker-compose-converter:
     title: Docker Run 到 docker-compose 转换器
@@ -264,6 +290,12 @@ tools:
   chmod-calculator:
     title: Chmod 计算器
     description: 使用此在线的chmod计算器计算chmod权限和命令。
+    read: 读权限
+    write: 写权限
+    execute: 执行权限
+    owner: 拥有者
+    group: 用户组
+    public: 其他用户
 
   rsa-key-pair-generator:
     title: RSA密钥对生成器
@@ -299,6 +331,24 @@ tools:
   ipv4-subnet-calculator:
     title: IPv4子网计算器
     description: 解析IPv4 CIDR块，并获取有关子网络的所有所需信息。
+    input: 请输入一个携带掩码或不带掩码的IPv4地址
+    placeholder: 请输入一个IPv4网络地址
+    parseError: 无法解析的网络地址, 请检查输入
+    netmask: 子网掩码
+    address: 网络地址
+    networkMask: 网络掩码
+    networkMaskBinary: 二进制网络掩码
+    cidr: 掩码长度
+    wildMask: 通配符掩码
+    networkSize: 网络大小
+    ipStart: 起始地址
+    ipEnd: 结束地址
+    broadcast: 广播地址
+    broadcastUnknown: 此掩码的网络地址没有广播地址
+    ipType: IP种类
+    ipTypeUnknown: 未知的网络种类
+    prevBlock: 前一个网段
+    nextBlock: 下一个网段
 
   og-meta-generator:
     title: 开放式图形元生成器
@@ -311,6 +361,9 @@ tools:
   hash-text:
     title: Hash 文本
     description: '使用所需的函数哈希文本字符串：MD5、SHA1、SHA256、SHA224、SHA512、SHA384、SHA3或RIPEMD160'
+    stringToHashText: '请输入待Hash的字符串...'
+    stringToHashLabel: '字符串转 Hash'
+    encodeType: '编码类型'
 
   json-to-toml:
     title: JSON 转 TOML
@@ -331,6 +384,8 @@ tools:
   ulid-generator:
     title: ULID 生成器
     description: 生成随机的通用唯一词典可排序标识符（ULID）。
+    quantity: 生成数量
+    format: 格式化
 
   string-obfuscator:
     title: 字符串混淆器
@@ -347,6 +402,13 @@ tools:
   uuid-generator:
     title: UUIDs 生成器
     description: 通用唯一标识符（UUID）是一个128位数字，用于标识计算机系统中的信息。可能的UUID数量为16^32，即2^128或约3.4x10^38（这是一个很大的数字！）。
+    version: UUID版本
+    quantity: 生成数量
+    namespace: 命名空间
+    copy: 复制
+    name: 名称
+    refresh: 刷新
+
 
   ipv4-address-converter:
     title: Ipv4地址转换器

@@ -14,6 +14,10 @@ dist-ssr
 coverage
 *.local
 
+.fleet/
+.idea/
+yarn.lock
+
 /cypress/videos/
 /cypress/screenshots/
 

@@ -3,6 +3,7 @@ home:
     newestTools: Newest tools
     favoriteTools: 'Your favorite tools'
     allTools: 'All the tools'
+  name: Fengqi
   subtitle: 'Handy tools for developers'
   toggleMenu: 'Toggle menu'
   home: Home
@@ -56,6 +57,11 @@ toolCard:
   new: New
 search:
   label: Search
+copy:
+  copyToPaste: 'Copy to clipboard'
+  copied: 'Copied!'
+  refresh: Copy
+  copy: Refresh
 tools:
   categories:
     favorite-tools: 'Your favorite tools'
@@ -187,6 +193,21 @@ tools:
   base64-string-converter:
     title: Base64 string encoder/decoder
     description: Simply encode and decode strings into their base64 representation.
+    stringToBase64: String to base64
+    urlEncodeSafe: Encode URL safe
+    stringEncode: String to encode
+    inputString: Put your string here...
+    base64String: Base64 of string
+    base64ShowString: Base64 编码结果将展示在此
+    copyBase64: Copy base64
+
+    base64ToString: Base64 to string
+    urlDecodeSafe: Decode URL safe
+    base64Encode: Base64 string to decode
+    inputBase64: Your base64 string...
+    decodeString: Decoded string
+    decodeShow: The decoded string will be here
+    copyString: Copy decoded string
 
   toml-to-yaml:
     title: TOML to YAML
@@ -227,6 +248,11 @@ tools:
   json-prettify:
     title: JSON prettify and format
     description: Prettify your JSON string into a friendly, human-readable format.
+    rawJson: Your raw JSON
+    pretty: Prettified version of your JSON
+    sortKeys: Sort keys
+    indentSize: Indent size
+    invalid: Provided JSON is not valid.
 
   docker-run-to-docker-compose-converter:
     title: Docker run to Docker compose converter
@@ -267,6 +293,12 @@ tools:
   chmod-calculator:
     title: Chmod calculator
     description: Compute your chmod permissions and commands with this online chmod calculator.
+    read: Read
+    write: Write
+    execute: Execute
+    owner: Owner
+    group: Group
+    public: Public
 
   rsa-key-pair-generator:
     title: RSA key pair generator
@@ -303,6 +335,24 @@ tools:
   ipv4-subnet-calculator:
     title: IPv4 subnet calculator
     description: Parse your IPv4 CIDR blocks and get all the info you need about your subnet.
+    input: An IPv4 address with or without mask
+    placeholder: The ipv4 address...
+    parseError: We cannot parse this address, check the format
+    netmask: Netmask
+    address: Network address
+    networkMask: Network mask
+    networkMaskBinary: Network mask in binary
+    cidr: CIDR notation
+    wildMask: Wildcard mask
+    networkSize: Network size
+    ipStart: First address
+    ipEnd: Last address
+    broadcast: Broadcast address
+    broadcastUnknown: No broadcast address with this mask
+    ipTypeUnknown: Unknown class type
+    ipType: IP class
+    prevBlock: Previous Block
+    nextBlock: Next Block
 
   og-meta-generator:
     title: Open graph meta generator
@@ -315,6 +365,9 @@ tools:
   hash-text:
     title: Hash text
     description: 'Hash a text string using the function you need : MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3 or RIPEMD160'
+    stringToHashText: 'Your string to hash...'
+    stringToHashLabel: 'Your text to hash'
+    encodeType: 'Digest encoding'
 
   json-to-toml:
     title: JSON to TOML
@@ -336,9 +389,12 @@ tools:
     title: ULID generator
     description: Generate random Universally Unique Lexicographically Sortable Identifier (ULID).
 
+
   string-obfuscator:
     title: String obfuscator
     description: Obfuscate a string (like a secret, an IBAN, or a token) to make it shareable and identifiable without revealing its content.
+    quantity: Quantity
+    format: Format Type
 
   base-converter:
     title: Integer base converter
@@ -351,6 +407,12 @@ tools:
   uuid-generator:
     title: UUIDs generator
     description: A Universally Unique Identifier (UUID) is a 128-bit number used to identify information in computer systems. The number of possible UUIDs is 16^32, which is 2^128 or about 3.4x10^38 (which is a lot!).
+    version: UUID Version
+    quantity: Quantity
+    namespace: Namespace
+    copy: Copy
+    name: Name
+    refresh: Refresh
 
   ipv4-address-converter:
     title: IPv4 address converter

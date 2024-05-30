@@ -31,11 +31,13 @@ hljs.registerLanguage('xml', xmlHljs);
 hljs.registerLanguage('yaml', yamlHljs);
 hljs.registerLanguage('toml', iniHljs);
 
-const { value, language, followHeightOf, copyPlacement, copyMessage } = toRefs(props);
+const { t } = useI18n();
+
+const { value, language, followHeightOf, copyPlacement } = toRefs(props);
 const { height } = followHeightOf.value ? useElementSize(followHeightOf) : { height: ref(null) };
 
 const { copy, isJustCopied } = useCopy({ source: value, createToast: false });
-const tooltipText = computed(() => isJustCopied.value ? 'Copied!' : copyMessage.value);
+const tooltipText = computed(() => isJustCopied.value ? t('copy.copied') : t('copy.copy'));
 </script>
 
 <template>
