@@ -3,8 +3,8 @@ home:
     newestTools: '最新工具'
     favoriteTools: '我的收藏'
     allTools: '全部工具'
-  name: 疯奇
-  subtitle: '在线IT工具, 好看又好用'
+  name: 'Dodge'
+  subtitle: '好用的在线IT工具'
   toggleMenu: '切换菜单'
   home: '主页'
   uiLib: 'UI 库'
